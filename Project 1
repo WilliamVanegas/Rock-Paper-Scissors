@@ -1,0 +1,75 @@
+var number = prompt ("How many rounds do you want to play?")
+
+if (number !=null){
+ document.getElementById("demo").innerHTML=
+ "Rounds" + number;
+ }
+ 
+ var text = 'numberpx';
+var integer = parseInt(text, 10);
+// returns number
+
+var [r,p,s] = prompt ("Choose: r,p,s")
+var [r,p,s] = [0,1,2]
+
+play=Math.floor(Math.random() * 2) returns a random integer between 0 and 2 (both 
+included)
+{
+document.getElementById("demo").innerHTML =
+Math.floor(Math.random() * 2);
+}
+
+let selection;
+let rockWin;
+let rockLoss;
+let paperWin;
+let paperLoss;
+let scisWin;
+let scisLoss;
+let tie;
+
+rockWin= "You Won! Rock beats Scissors!";
+rockLoss= "You Lost. Paper beats Rock.";
+paperWin= "You Won! Paper beats Rock!";
+paperLoss= "You Lost. Scissors beats Paper.";
+scisWin= "You Won! Scissors beats Paper!";
+scisLoss= "You Lost. Rock beats Scissors.";
+tie= "You tied. Keep Trying.";
+
+if (selection === "Rock" && computerSelection === "Scissors"){
+   return rockWin;}
+ else if (selection === "Rock" && computerSelection === "Paper") {
+    return rockLoss;}
+ else if (selection === "Paper" && computerSelection === "Rock"){
+    return paperWin;}
+ else if (selection === "Paper" && computerSelection === "Scissors"){
+    return paperLoss;}
+ else if (selection === "Scissors" && computerSelection === "Paper"){
+    return scisWin;}
+ else if (selection === "Scissors" && computerSelection === "Rock"){
+    return scisLoss;}
+  else if (selection === computerSelection){
+    return tie;}
+    
+ function game(){
+  let playCount = 0;
+  let compCount = 0;
+  
+ playSelection = prompt("Choose Rock, Paper, or Scissors!");
+   playRound(playSelection, computerPlay());
+   outcome = playRound(playSelection, computerPlay());
+   console.log(outcome);
+   if (outcome == rockWin || outcome == paperWin || outcome == scisWin){
+   playCount++} 
+   else if (outcome == rockLoss || outcome == paperLoss || outcome == scisLoss){
+   compCount++}
+   else {
+   playCount = playCount;
+   compCount = compCount;}
+
+if (playCount > compCount){
+alert ("YOU WON! COGRATULATIONS!!!");}
+else if (playCount < compCount){
+alert ("YOU LOST. TRY AGAIN")
+else{
+alert ("You tied. Nice try")}
